@@ -1,0 +1,13 @@
+<view class="van-button-wrapper">
+    <van-button 
+    bind:click="pageSkipFn"
+    type="primary" 
+    size="large"
+    round
+    plain
+    hairline
+    style="--button-color--: rgba({{itemColor}});"
+>{{name}}
+    <text class="iconfont {{iconUrl}} icon-style"></text>
+</van-button>
+</view>

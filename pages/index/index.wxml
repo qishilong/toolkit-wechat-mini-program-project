@@ -1,151 +1,17 @@
-<!-- <include src="./../../template/header"/>
-
-<view>{{time}}</view>
-<view>
-  <text>111</text>
-</view>
-<textarea value="11" />
-<view>
-  <text>{{name}}</text>
-</view>
-<view>
-  <text data-size="10">1</text>
+<view class="title">
+    <text>Your Toolkit</text>
 </view>
 
-<view>
-  <text>{{ a === b ? 'a等于b' : 'a 不等于 b'}}</text>
-  <view>
-    <text>{{a === c}}</text>
-  </view>
-  <view>
-    <text>{{[1,2,3]}}</text>
-  </view>
+<view class="title-image-wrapper">
+    <image src="https://images-1305186932.cos.ap-beijing.myqcloud.com/images/202306081638299.svg" alt="" class="title-image"/>
 </view>
 
-<view>
-  <text wx:if="{{!isShow}}">{{true}}</text>
-</view>
+<indexItem 
+    wx:for="{{pageIndexInfo}}" 
+    wx:key="this"
+    pagePath = "{{item.pagePath}}"
+    name = "{{item.name}}"
+    iconUrl = "{{item.iconUrl}}"
+    itemColor = "{{item.itemColor}}"
+></indexItem>
 
-<view wx:if="{{false}}">
-  <text>1</text>
-</view>
-<view wx:elif="{{true}}">
-  <text>2</text>
-</view>
-<view wx:else>
-  <text>3</text>
-</view>
-
-<block wx:if="{{!!false}}">
-  <view>
-    <text>block</text>
-  </view>
-</block>
-
-<view wx:for="{{listShow}}" wx:key="index">
-  {{index}} : {{item}}
-</view>
-
-<view wx:for="{{listString}}" wx:key="index">
-  {{index}} : {{item}}
-</view>
-
-<view wx:for="{{listCustom}}" wx:key="indexString" wx:for-index = 'indexString' wx:for-item = 'itemString'>
-  {{indexString}} : {{itemString}}
-</view>
-
-<block wx:for="{{[1, 2, 3]}}" wx:key="index">
-  <view> {{index}}: {{item}} </view>
-</block>
-
-
-<switch wx:for="{{objectArray}}" wx:key="unique" > {{item.id}} </switch>
-<button bindtap="switch"> Switch </button>
-<button bindtap="addToFront"> Add to the front </button>
-
-
-<switch wx:for="{{numberArray}}" wx:key="*this" > {{item}} </switch>
-<button bindtap="addNumberToFront"> Add Number to the front </button>
-
-<template name="show1">
-  <view>
-    <text>模版1</text>
-    <text>{{first}}</text>
-  </view>
-</template>
-
-<template name="show2">
-  <view>
-    <text>模版2</text>
-    <text>{{second}}</text>
-  </view>
-</template>
-
-<block>
-  <template is="{{ a === b ? 'show1' : 'show2' }}" data="{{first: 1, second:2}}"/>
-</block>
-
-<import src="./../../template/itemA"/>
-<import src="./../../template/itemB" />
-const data = {
-  name: 
-}
-<template 
-  is="{{a === b ? 'itemA' : 'itemB'}}" 
-  data="{{...importTempleteData}}"
-/>
-
-<include src="./../../template/footer"/>
-
-<view>
-  <text class="color1">样式1</text>
-</view>
-
-<view>
-  <text class="color2">
-    样式二
-  </text>
-</view>
-
-<view class="color3">
-  <text class="color2">
-    样式三
-  </text>
-</view>
-
-
-<view>
-  <text id="color4">样式四</text>
-</view>
-
-<view
-  id="outer"
-  bind:touchstart="handleTap1"
-  capture-bind:touchstart="handleTap2"
->
-  outer view
-  <view
-    id="inner"
-    bind:touchstart="handleTap3"
-    capture-bind:touchstart="handleTap4"
-  >
-    inner view
-  </view>
-</view>
-
-<view>
-  <text bindlongpress="handleLongPressFn" bindtap="handTap">
-    handleLongPressFn
-  </text>
-</view>
-
-<view>
-  <text bindlongtap="longTapFn" bindtap="handTap">
-    longTapFn
-  </text>
-</view> -->
-
-<view>
-  <text>首页</text>
-</view>
-<button bindtap="skipDetailFn">跳转去详情</button>
