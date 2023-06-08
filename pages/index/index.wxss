@@ -1,0 +1,36 @@
+.color1{
+	color: #ccc;
+}
+
+.color2{
+	color: red;
+	background-color: #008c8c;
+}
+
+.color3{
+	color: #000;
+	background-color: #aabbcc;
+}
+
+#color4{
+	font-size: 32rpx;
+	color: #cba;
+	background-color: #bac;
+	border: 10rpx solid;
+	/* display: inline-block; */
+}
+
+#outer{
+	border: 1rpx solid;
+	height: 400rpx;
+	width: 400rpx;
+	text-align: center;
+}
+
+#inner{
+	border: 1rpx solid;
+	height: 200rpx;
+	width: 300rpx;
+	text-align: center;
+	margin: 0 auto;
+}

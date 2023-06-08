@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "miniDemo",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json",
+  
+  "usingComponents": {
+    "van-tag": "@vant/weapp/tag/index"
+  }
+}
