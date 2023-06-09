@@ -1,2 +1,22 @@
-<!--pages/drawingBoard/drawingBoard.wxml-->
-<text>pages/drawingBoard/drawingBoard.wxml</text>
+<!-- 最外层的容器 -->
+<view class="container">
+  <!-- 画布区域 -->
+  <canvas type="2d" id="myCanvas" class="canvas-area" disable-scroll="false" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend"></canvas>
+  <!-- 画布工具区域 -->
+  <view class='canvas-tools'>
+    <!-- 细笔绘制 -->
+    <view class='box box1' bindtap='penSelect' data-param='5'></view>
+    <!-- 粗笔绘制 -->
+    <view class='box box2' bindtap='penSelect' data-param='15'></view>
+    <!-- 各种颜色的笔 -->
+    <view class='box box3' bindtap='colorSelect' data-param='#ff0000'></view>
+    <view class='box box4' bindtap='colorSelect' data-param='#ff7f00'></view>
+    <view class='box box5' bindtap='colorSelect' data-param='#ffff00'></view>
+    <view class='box box6' bindtap='colorSelect' data-param='#00ff00'></view>
+    <view class='box box7' bindtap='colorSelect' data-param='#00ffff'></view>
+    <view class='box box8' bindtap='colorSelect' data-param='#0000ff'></view>
+    <view class='box box9' bindtap='colorSelect' data-param='#8b00ff'></view>
+    <!-- 橡皮 -->
+    <view class='box box10' bindtap='clearCanvas'></view>
+  </view>
+</view>

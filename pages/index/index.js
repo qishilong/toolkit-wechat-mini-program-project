@@ -9,7 +9,7 @@ Page({
                 name: "翻译",
                 pagePath: "../translateIndex/translateIndex",
                 iconUrl: "icon-translate",
-                itemColor: "85, 109, 234, 0.9"
+                itemColor: "68, 150, 247, 0.9"
             },
             {
                 name: "任务清单",
@@ -18,7 +18,7 @@ Page({
                 itemColor: "209, 76, 57, 0.9"
             },
             {
-                name: "画板",
+                name: "涂鸦板",
                 pagePath: "../drawingBoard/drawingBoard",
                 iconUrl: "icon-board",
                 itemColor: "100, 206, 242, 0.9"
