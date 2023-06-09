@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/translateIndex/translateIndex",
     "pages/translateHistory/translateHistory",
@@ -10,17 +10,20 @@
     "pages/drawingBoard/drawingBoard",
     "pages/chickenMusic/chickenMusic"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Toolkit",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-
   "usingComponents": {
     "van-tag": "@vant/weapp/tag/index",
     "van-button": "@vant/weapp/button/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "van-icon": "@vant/weapp/icon/index",
+    "tab-bar": "/components/custom-tab-bar/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "todolistItem": "/components/todolistItem/todolistItem"
   }
 }

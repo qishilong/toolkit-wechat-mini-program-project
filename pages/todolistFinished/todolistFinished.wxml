@@ -1,2 +1,17 @@
-<!--pages/todolistFinished/todolistFinished.wxml-->
-<text>pages/todolistFinished/todolistFinished.wxml</text>
+<view class="title">共 {{list.length}} 项已完成任务</view>
+<view class="listContainer">
+  <!-- 根据任务的长度来显示对应的任务条目 -->
+  <todolistItem wx:for="{{list}}" wx:key="this" item="{{item}}" bindfresh="fresh"></todolistItem>
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onPageChange">
+  <van-tabbar-item 
+    wx:for="{{pagePathInfo}}" 
+    wx:key="this"
+    icon-prefix = "iconfont"
+    icon = "{{item.icon}}"
+    url = "{{item.path}}"
+  >
+    {{item.text}}
+  </van-tabbar-item>
+</van-tabbar>

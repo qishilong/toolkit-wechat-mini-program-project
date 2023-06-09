@@ -1,3 +1,8 @@
 {
-    "usingComponents": {}
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#4b3c96",
+  "navigationBarTitleText": "翻译助手",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#4b3c96"
 }

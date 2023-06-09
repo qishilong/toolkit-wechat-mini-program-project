@@ -1,2 +1,26 @@
-<!--pages/translateHistory/translateHistory.wxml-->
-<text>pages/translateHistory/translateHistory.wxml</text>
+<scroll-view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <text>翻译历史</text>
+    <text class="iconfont icon-close" bindtap="clearHistory">清除历史记录</text>
+  </view>
+  <!-- 历史记录 -->
+  <view class="list">
+    <view class="item" wx:for="{{historyList}}" wx:key="this">
+      <view>{{item.sourceTxt}}</view>
+      <view>{{item.resultTxt}}</view>
+    </view>
+  </view>
+</scroll-view>
+
+<van-tabbar active="{{ active }}" bind:change="onPageChange">
+  <van-tabbar-item 
+    wx:for="{{pagePathInfo}}" 
+    wx:key="this"
+    icon-prefix = "iconfont"
+    icon = "{{item.icon}}"
+    url = "{{item.path}}"
+  >
+    {{item.text}}
+  </van-tabbar-item>
+</van-tabbar>

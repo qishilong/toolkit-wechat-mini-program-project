@@ -13,7 +13,7 @@ Page({
             },
             {
                 name: "任务清单",
-                pagePath: "../todolistiIndex/todolistiIndex",
+                pagePath: "../todolistIndex/todolistIndex",
                 iconUrl: "icon-todolist",
                 itemColor: "209, 76, 57, 0.9"
             },
@@ -43,5 +43,7 @@ Page({
         //       url: pathUrl,
         //     })
         // }
+    },
+    onShow(){
     }
 })

@@ -1,66 +1,49 @@
-// pages/translateChange/translateChange.js
+const app = getApp()
+
 Page({
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    active: app.globalData.translatePageInfo.active,
+    pagePathInfo: app.globalData.translatePageInfo.info,
+    lanList : app.globalData.lanList, // 从全局获取所有的语言
+    curLanIndex : app.globalData.curLan.index// 当前语言的索引
+  },
 
-    /**
-     * 页面的初始数据
-     */
-    data: {
+  onShow(){
+    this.setData({
+      active: app.globalData.translatePageInfo.active,
+      curLanIndex : app.globalData.curLan.index
+    })
+    app.globalData.translatePageInfo.active = this.data.active
+  },
 
-    },
+  onUnload() {
+    this.setData({
+      active: app.globalData.translatePageInfo.active,
+      curLanIndex : app.globalData.curLan.index
+    })
+    app.globalData.translatePageInfo.active = this.data.active < 1 ? 1 : this.data.active;
+  },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+  selectHandle(options){
+    const index = options.currentTarget.dataset.id;
+    // 接下来需要修改全局的当前语言
+    for(let i=0;i<app.globalData.lanList.length;i++){
+      if(app.globalData.lanList[i].index === index){
+        app.globalData.curLan = app.globalData.lanList[i];
+        // 再重新设置一下 curLanIndex
+        this.setData({
+          curLanIndex : app.globalData.curLan.index// 当前语言的索引
+        })
+      }
     }
+  },
+  onPageChange(event) {
+    this.setData({
+      active: event.detail
+    })
+    app.globalData.translatePageInfo.active = event.detail
+  },
 })

@@ -19,7 +19,7 @@ Component({
         name: "尝试一下",
         iconUrl: "https://images-1305186932.cos.ap-beijing.myqcloud.com/images/202306081657534.svg",
         itemColor: "114, 236, 232",
-        pagePath:"1111"
+        pagePath:""
     },
 
     /**

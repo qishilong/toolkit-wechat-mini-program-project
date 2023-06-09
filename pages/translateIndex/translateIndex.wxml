@@ -1,2 +1,34 @@
-<!--pages/translateIndex/translateIndex.wxml-->
-<text>pages/translateIndex/translateIndex.wxml</text>
+<!-- 最外层容器 -->
+<view class="container">
+  <!-- 目标语言的选择 -->
+  <view class="lanSelectContainer">
+    <text bindtap="goToChange">翻译成{{curLanTxt}}</text>
+    <text class="iconfont .icon-down-arrow"></text>
+  </view>
+  <!-- 文本输入框 -->
+  <view class="tranlateTxt">
+    <textarea 
+      placeholder="请输入您要翻译的文本"
+      bindblur="tanslateHandler"
+      model:value="{{query}}"
+      bindinput="inputHandle"
+    ></textarea>
+  </view>
+  <!-- 翻译结果 -->
+  <view class="resultTxt">
+    <view>译文</view>
+    <view class="content">{{content}}</view>
+  </view>
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onPageChange">
+  <van-tabbar-item 
+    wx:for="{{pagePathInfo}}" 
+    wx:key="this"
+    icon-prefix = "iconfont"
+    icon = "{{item.icon}}"
+    url = "{{item.path}}"
+  >
+    {{item.text}}
+  </van-tabbar-item>
+</van-tabbar>

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@vant/weapp": "^1.10.19"
+    "@vant/weapp": "^1.10.19",
+    "md5": "^2.3.0"
   }
 }

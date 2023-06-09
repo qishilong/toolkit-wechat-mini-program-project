@@ -1,2 +1,30 @@
-<!--pages/translateChange/translateChange.wxml-->
-<text>pages/translateChange/translateChange.wxml</text>
+<!-- 一项一项的语言 -->
+<view 
+  class="container"
+  wx:for="{{lanList}}"
+  wx:key="this"
+  data-id="{{index}}"
+  bindtap="selectHandle"
+>
+  <view
+    wx:if="{{curLanIndex === index}}"
+  >
+    {{item.chs}}
+    <text class="select iconfont icon-duihao"></text>
+  </view>
+  <view wx:else>
+    {{item.chs}}
+  </view>
+</view>
+
+<van-tabbar active="{{ active }}" bind:change="onPageChange">
+  <van-tabbar-item 
+    wx:for="{{pagePathInfo}}" 
+    wx:key="this"
+    icon-prefix = "iconfont"
+    icon = "{{item.icon}}"
+    url = "{{item.path}}"
+  >
+    {{item.text}}
+  </van-tabbar-item>
+</van-tabbar>
