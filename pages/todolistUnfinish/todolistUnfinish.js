@@ -28,7 +28,6 @@ Page({
       this.fresh();
       this.setData({
         active: app.globalData.todolistPageInfo.active,
-        curLanTxt: app.globalData.curLan.chs,
       })
       app.globalData.todolistPageInfo.active = this.data.active
     },

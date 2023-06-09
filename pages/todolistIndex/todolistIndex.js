@@ -22,7 +22,6 @@ Page({
     this.fresh();
     this.setData({
       active: app.globalData.todolistPageInfo.active,
-      curLanTxt: app.globalData.curLan.chs,
     })
     app.globalData.todolistPageInfo.active = this.data.active
   },
@@ -43,6 +42,11 @@ Page({
         newContent: '',
         list: app.globalData.todolist
       });
+      // 将新的todolist列表保存到本地
+      wx.setStorage({
+        key: 'todolistData',
+        data: app.globalData.todolist
+      })
       wx.showToast({
         title: '新增任务成功',
         icon:'success'

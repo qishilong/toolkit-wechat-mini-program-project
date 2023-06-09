@@ -9,6 +9,13 @@ App({
         this.globalData.history = res.data;
       }
     })
+    wx.getStorage({
+      key: "todolistData",
+      success: (res) => {
+        // 我们需要将其赋值给 globalData 里面的 todolist
+        this.globalData.todolist = res.data;
+      }
+    })
   },
   // 全局的数据，所有页面都可以使用这个数据
   globalData: {
@@ -83,12 +90,6 @@ App({
       ]
     },
     // 存储所有的待办事项
-    todolist : [{
-      content : '看电影',
-      isComplete : true
-    },{
-      content : '学习小程序',
-      isComplete : false
-    }]
+    todolist : []
   }
 })

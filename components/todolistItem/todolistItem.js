@@ -28,6 +28,11 @@ Component({
           isComplete: !item.isComplete
         }
       })
+      // 将新的todolist列表保存到本地
+      wx.setStorage({
+        key: 'todolistData',
+        data: app.globalData.todolist
+      })
       // 5. 需要触发父组件的 fresh 事件，从而更新页面的 list
       this.triggerEvent('fresh');
     },
@@ -47,7 +52,11 @@ Component({
             wx.showToast({
               title: '删除成功',
             });
-
+            // 将新的todolist列表保存到本地
+            wx.setStorage({
+              key: 'todolistData',
+              data: app.globalData.todolist
+            })
             this.triggerEvent("fresh");
           }
         }
