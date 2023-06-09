@@ -6,7 +6,7 @@ Page({
     data: {
         pageIndexInfo: [
             {
-                name: "翻译",
+                name: "翻译助手",
                 pagePath: "../translateIndex/translateIndex",
                 iconUrl: "icon-translate",
                 itemColor: "68, 150, 247, 0.9"

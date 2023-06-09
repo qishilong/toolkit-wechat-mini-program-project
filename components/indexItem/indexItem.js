@@ -29,7 +29,7 @@ Component({
         pageSkipFn(){
             if(this.data.pagePath === ''){
                 wx.showToast({
-                  title: '新功能正在开发中，敬请期待...',
+                  title: '更多新功能正在开发中，敬请期待...',
                   icon: 'none'
                 })
             }

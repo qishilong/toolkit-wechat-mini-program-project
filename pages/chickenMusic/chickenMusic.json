@@ -1,3 +1,10 @@
 {
-    "usingComponents": {}
+  "usingComponents": {
+    "chickenMusicItem": "../../components/chickenMusicItem/chickenMuiscItem"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#e9b268",
+  "navigationBarTitleText": "IKUN",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#e9b268"
 }
