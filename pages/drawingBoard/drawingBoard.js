@@ -38,8 +38,6 @@ Page({
     this.startY = e.changedTouches[0].y;
 
     // 进行一些绘制的准备工作（笔粗细、颜色、笔头）
-    // 如果使用过微信小程序旧版接口的同学，需要注意
-    // 现在很多方法都没有，已经停止维护
     this.data.ctx.lineWidth = this.data.pen; // 笔粗细
     this.data.ctx.strokeStyle = this.data.color; // 画笔颜色
     this.data.ctx.lineCap = 'round'; // 设置笔头
