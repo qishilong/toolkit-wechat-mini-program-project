@@ -6,11 +6,11 @@
     font-size: 80rpx;
     color: rgb(114, 236, 232);
     text-align: center;
-    padding-bottom: 40rpx;
+    padding-bottom: 80rpx;
 }
 .title-image-wrapper{
     text-align: center;
-    padding-bottom: 40rpx;
+    padding-bottom: 80rpx;
 }
 
 .title-image{

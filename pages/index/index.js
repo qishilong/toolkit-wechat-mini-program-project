@@ -24,12 +24,6 @@ Page({
                 itemColor: "100, 206, 242, 0.9"
             },
             {
-                name: "iKUN",
-                pagePath: "../chickenMusic/chickenMusic",
-                iconUrl: "icon-chicken",
-                itemColor: "241, 167, 69, 0.9"
-            },
-            {
                 name: "未完待续...",
                 pagePath: "",
                 iconUrl: "icon-right-arrow",

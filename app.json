@@ -7,8 +7,7 @@
     "pages/todolistIndex/todolistIndex",
     "pages/todolistUnfinish/todolistUnfinish",
     "pages/todolistFinished/todolistFinished",
-    "pages/drawingBoard/drawingBoard",
-    "pages/chickenMusic/chickenMusic"
+    "pages/drawingBoard/drawingBoard"
   ],
   "window": {
     "backgroundTextStyle": "light",

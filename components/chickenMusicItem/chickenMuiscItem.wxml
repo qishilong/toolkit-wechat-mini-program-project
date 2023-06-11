@@ -1,8 +1,0 @@
-<view 
-  style="background-image: url({{backgroundImageUrl}});"
-  class="chicken-item-style"
-  bindtouchstart="onClickFn"
-  bindtouchend = "onCancleFn"
->
-  {{title}}
-</view>
